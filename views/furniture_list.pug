@@ -1,0 +1,14 @@
+extends layout 
+
+block content 
+
+    h1= title 
+
+    if furniture_list.length
+        ul 
+            each furniture in furniture_list 
+                li
+                    a(href=furniture.url) 
+                        | #{furniture.name}
+    else 
+        p There are no furniture

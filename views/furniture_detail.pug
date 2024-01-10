@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    h1 #{furniture.name}
+
+    p #[strong Description:] #{furniture.description}
+    p #[strong Price:] $#{furniture.price}
+    p #[strong Number in Stock:] #{furniture.number_in_stock}
+    p #[strong Category: ] 
+        each val, index in furniture.category
+            a(href=val.url) #{val.name}
+            if index < furniture.category.length - 1
+                |,&nbsp;
+
+    hr
+    p
+        a(href=furniture.url+'/delete') Delete Furniture
+    p
+        a(href=furniture.url+'/update') Update Furniture

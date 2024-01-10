@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #[em MyInventory]
+
+  p The store has the following record counts:
+
+  ul
+    li #[strong Categories:] !{categories_count}
+    li #[strong Furniture:] !{furniture_count}
